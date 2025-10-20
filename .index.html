@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Booking</title>
+    <meta name="author" content="Arsal Khan, 300211969">
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+            <h4>November 2040</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>S</th>
+                        <th>M</th>
+                        <th>T</th>
+                        <th>W</th>
+                        <th>T</th>
+                        <th>F</th>
+                        <th>S</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="inactive" colspan="4"></td> 
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Sunday" target="_blank">4</a></td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Sunday" target="_blank">11</a></td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Sunday" target="_blank">18</a></td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://en.wikipedia.org/wiki/Sunday" target="_blank">25</a></td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td>30</td>
+                        <td class="inactive"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" id="prev"><a href="https://en.wikipedia.org/wiki/October">« Oct</a></td>
+                        <td colspan="1"></td>
+                        <td colspan="3" id="next"><a href="https://en.wikipedia.org/wiki/December">Dec »</a></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="form-container">
+            <form id="meeting-form">
+                <fieldset>
+                    <legend>Meeting Details</legend>
+                    <label for="meet-name">Client Name:</label>
+                    <input type="text" id="meet-name" name="meet-name" placeholder="Enter name" required>
+                    <br>
+                    <label for="meet-first">First Meeting?</label>
+                    <input type="checkbox" id="meet-first" name="meet-first" checked>
+                    <br>
+                    <label for="meet-lang">Preferred Language</label>
+                    <select id="meet-lang" name="meet-lang">
+                        <option value="" disabled selected>Select one</option>
+                        <option value="english">English</option>
+                        <option value="french" selected>French</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="german">German</option>
+                        <option value="italian">Italian</option>
+                    </select>
+                    <br>
+                    <div class="form-group">
+                        <label>Client Type:</label>
+                        <div class="client-type-options">
+                            <label><input type="radio" id="school" name="meet-type" value="school"> School</label>
+                            <label><input type="radio" id="college" name="meet-type" value="college"> College</label>
+                            <label><input type="radio" id="university" name="meet-type" value="university"> University</label>
+                        </div>
+                    </div>
+                    <br>
+                    <label for="meet-date">Meeting Date (only input the day #):</label>
+                    <input type="number" id="meet-date" name="meet-date" required>
+                    <br>
+                    <label for="meet-time">Meeting Time:</label>
+                    <input type="time" id="meet-time" name="meet-time" required>
+                    <br>
+                    <br>
+                    <div class="button-group">
+                        <button type="submit" id="submit-btn">Submit</button>
+                        <button type="reset" id="reset-btn">Reset</button>
+                        <button type="button" id="reserve-btn">Reserve</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/scripts.js"></script>
+</body>
+</html>
