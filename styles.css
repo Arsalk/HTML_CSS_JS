@@ -1,0 +1,160 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar h4 {
+    background-color: salmon;
+    color: black;
+    padding: 10px 0;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    border: 2px solid lightgray;
+    padding: 5px; 
+    text-align: center;
+    width: 40px; 
+    box-sizing: border-box;
+}
+
+th {
+    height: 5px; 
+}
+
+td {
+    height: 40px;
+    background-color: #f5f5f5;
+}
+
+thead th {
+    background-color: #f5f5f5;
+}
+
+tfoot td {
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+tfoot #prev {
+    text-align: left;
+}
+
+tfoot #next {
+    text-align: right;
+}
+
+tfoot a {
+    color: gray; 
+    text-decoration: none; 
+}
+
+tfoot a:hover {
+    text-decoration: underline;
+}
+
+td.inactive {
+    background-color: #f5f5f5;
+}
+
+.calendar a {
+    color: green;
+    text-decoration: none;
+}
+
+.calendar a:hover {
+    text-decoration: underline;
+}
+
+.highlighted {
+    background-color: green; 
+    color: white; 
+}
+.form-container {
+    background-color: #d6eaf8;
+    border: 2px solid #aed6f1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    padding: 10px;
+}
+
+legend {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.client-type-options {
+    display: flex;
+    align-items: center;
+    gap: 0; 
+    flex-wrap: wrap;
+}
+
+.client-type-options label {
+    margin-right: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .calendar table {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+    
+    .calendar td {
+        width: 30px; /* Adjust width for smaller screens */
+        height: 30px; /* Adjust height for smaller screens */
+    }
+
+    .form-container {
+        padding: 10px;
+        width: 100%; /* Full width on smaller screens */
+    }
+    
+    .client-type-options {
+        flex-direction: column; /* Stack client type options vertically */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+
+    .calendar table {
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
+    
+    .calendar td {
+        width: 25px; /* Further adjust width for very small screens */
+        height: 25px; /* Further adjust height for very small screens */
+    }
+
+    .form-container {
+        padding: 5px;
+    }
+}
